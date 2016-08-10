@@ -2,13 +2,13 @@
 
 ## Firmware
 
-The heart of the layout is in [default--layout.c](Firmware/keyboard/ergodox/layout/default--layout.c).
+The firmware is now stored at [robenkleene/ergodox-firmware](https://github.com/robenkleene/ergodox-firmware).
 
 ### Compiling
 
-Just type `make` in the Firmware directory, note that this generates a lot of files that should be deleted without checking in.
-
-* [benblazak/ergodox-firmware: firmware for the ergoDOX keyboard](https://github.com/benblazak/ergodox-firmware#compile-the-source-code)
+* Just type `make` in the Firmware directory, note that this generates a `build/` folder that should not be checked in.
+* New layouts are created by copying `qwerty-kinesis-mod.h` and `qwerty-kinesis-mod.c` which are the default layouts.
+* Which layout to compile is set in [src/makefile-options](src/makefile-options).
 
 ### Installing
 
