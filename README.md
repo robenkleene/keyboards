@@ -6,6 +6,8 @@ The heart of the layout is in [default--layout.c](Firmware/keyboard/ergodox/layo
 
 ### Compiling
 
+Just type `make` in the Firmware directory, note that this generates a lot of files that should be deleted without checking in.
+
 * [benblazak/ergodox-firmware: firmware for the ergoDOX keyboard](https://github.com/benblazak/ergodox-firmware#compile-the-source-code)
 
 ## Resources
