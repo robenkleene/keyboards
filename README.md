@@ -12,11 +12,11 @@ Just type `make` in the Firmware directory, note that this generates a lot of fi
 
 ### Installing
 
-1. Download and run the Teensy Loader app
-2. Press and release the Teensy reset button
-3. Click the "Auto" button on the upper right hand side of the Teensy-Loader window
-4. Drag and drop the '.hex' file onto the Teensy loader window.
-5. Press and release the Teensy reset button
+1. Download and run the [Teensy Loader Application](https://www.pjrc.com/teensy/loader.html).
+2. Press and release the "Teensy reset button" (paperclip button in the upper right on the right hand keyboard).
+3. In Teensy, click the "Auto" button on the upper right hand.
+4. Drag and drop the `.hex` file onto Teensy.
+5. Press and release the Teensy reset button again.
 
 ## Resources
 
