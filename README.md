@@ -10,6 +10,8 @@ The firmware is now stored at [robenkleene/ergodox-firmware](https://github.com/
 * New layouts are created by copying `qwerty-kinesis-mod.h` and `qwerty-kinesis-mod.c` which are the default layouts.
 * Which layout to compile is set in [src/makefile-options](https://github.com/robenkleene/ergodox-firmware/blob/master/src/makefile-options).
 * [`src/lib/usb/usage-page/keyboard--short-names.h`](https://github.com/robenkleene/ergodox-firmware/blob/master/src/lib/usb/usage-page/keyboard--short-names.h)
+* Lining up the keys in code is done by piping the comma-delimited list through `column -t`.
+
 ### Installing
 
 1. Download and run the [Teensy Loader Application](https://www.pjrc.com/teensy/loader.html).
