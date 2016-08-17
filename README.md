@@ -12,13 +12,15 @@ The firmware is now stored at [robenkleene/ergodox-firmware](https://github.com/
 * [`src/lib/usb/usage-page/keyboard--short-names.h`](https://github.com/robenkleene/ergodox-firmware/blob/master/src/lib/usb/usage-page/keyboard--short-names.h)
 * Lining up the keys in code is done by piping the comma-delimited list through `column -t`.
 
-### Installing
+### Installing 
 
-1. Download and run the [Teensy Loader Application](https://www.pjrc.com/teensy/loader.html).
-2. Press and release the "Teensy reset button" (paperclip button in the upper right on the right hand keyboard).
-3. In Teensy, click the "Auto" button on the upper right hand.
-4. Drag and drop the `.hex` file onto Teensy.
-5. Press and release the Teensy reset button again.
+Using the Teensy app, the "Teensy reset button" is the paperclip button in the upper right of the keyboard.
+
+1. Drag and drop `firmware.eep` onto Teensy.
+2. Press the Teensy reset button, this will trigger a reset and displays and error message saying the reset was too fast.
+3. Drag and drop `firmware.hex` onto Teensy.
+4. Click the "Auto" button in Teensy.
+6. Press the Teensy reset button again.
 
 ## Resources
 
