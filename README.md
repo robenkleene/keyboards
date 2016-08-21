@@ -2,7 +2,7 @@
 
 ## Firmware
 
-The firmware is now stored at [robenkleene/ergodox-firmware](https://github.com/robenkleene/ergodox-firmware).
+The firmware is now at [robenkleene/ergodox-firmware](https://github.com/robenkleene/ergodox-firmware).
 
 ### Compiling
 
