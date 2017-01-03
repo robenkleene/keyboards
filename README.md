@@ -2,17 +2,30 @@
 
 ## Firmware
 
-The firmware is now at [robenkleene/ergodox-firmware](https://github.com/robenkleene/ergodox-firmware).
+### `ergodox-firmware`
 
-### Compiling
-
-* Just type `make` in the Firmware directory, note that this generates a `build/` folder that should not be checked in.
-* New layouts are created by copying `qwerty-kinesis-mod.h` and `qwerty-kinesis-mod.c` which are the default layouts.
-* Which layout to compile is set in [src/makefile-options](https://github.com/robenkleene/ergodox-firmware/blob/master/src/makefile-options).
-* [`src/lib/usb/usage-page/keyboard--short-names.h`](https://github.com/robenkleene/ergodox-firmware/blob/master/src/lib/usb/usage-page/keyboard--short-names.h)
+* [robenkleene/ergodox-firmware](https://github.com/robenkleene/ergodox-firmware).
+* Just type `make` in the root directory.
 * Lining up the keys in code is done by piping the comma-delimited list through `column -t`.
 
-### Installing 
+#### Resources
+
+* [`src/lib/usb/usage-page/keyboard--short-names.h`](https://github.com/robenkleene/ergodox-firmware/blob/master/src/lib/usb/usage-page/keyboard--short-names.h)
+
+### `qmk_firmware`
+
+1. Go the folder for the appropriate keyboard `/keyboards/ergodox`
+2. Run `make robenkleene_osx`
+3. This builds the firmware in `/qmk_firmware/.build`
+4. It looks like this can be installed without the `.eep` file from below?
+
+#### Resources
+
+* [Available Key Codes](https://github.com/jackhumbert/qmk_firmware/blob/master/doc/keycode.txt)
+* [Some keymap information, but this is for `tmk`](https://github.com/tmk/tmk_core/blob/master/doc/keymap.md#31-momentary-switching)
+* [Better layer information for `qmk`](http://qmk.fm/keyboards/hhkb/#switching-and-toggling-layers)
+
+## Installation
 
 Using the Teensy app, the "Teensy reset button" is the paperclip button in the upper right of the keyboard.
 
@@ -21,7 +34,3 @@ Using the Teensy app, the "Teensy reset button" is the paperclip button in the u
 3. Drag and drop `firmware.hex` onto Teensy.
 4. Click the "Auto" button in Teensy.
 6. Press the Teensy reset button again.
-
-## Resources
-
-* [Nice use of ASCII here](https://github.com/grota/tmk_keyboard/blob/grota_layout/keyboard/ergodox/keymap_grota.h#L25)
