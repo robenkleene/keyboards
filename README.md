@@ -17,7 +17,7 @@
 1. Go the folder for the appropriate keyboard `/keyboards/ergodox`
 2. Run `make robenkleene_osx`
 3. This builds the firmware in `/qmk_firmware/.build`
-4. It looks like this can be installed without the `.eep` file from below?
+4. It looks like this can be installed with just the `.hex` file (without the `.eep` file) from below?
 
 #### Resources
 
