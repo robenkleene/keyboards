@@ -23,7 +23,7 @@ In source code, align key code columns with `column -t`.
 
 Using Teensy, the "Teensy reset button" is the paperclip button in the upper right of the keyboard.
 
-1. Drag `ergodox_ez_robenkleene_osx.hex` onto Teensy.
+1. Drag `ergodox_ez_robenkleene_macos.hex` onto Teensy.
 2. Click the "Auto" button in Teensy.
 3. Press the Teensy reset button.
 
