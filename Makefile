@@ -10,5 +10,5 @@ link:
 unlink:
 	# [ ! -L "$ERGODOX" ] || rm -v "$ERGODOX"; 
 	# [ ! -L "$PLANCK" ] || rm -v "$PLANCK"; 
-	[ ! -L "$(ERGODOX)" ] || echo "DELETE"
-	[ ! -L "$(PLANCK)" ] || echo "DELETE"
+	[ ! -L "$(ERGODOX)robenkleene_macos" ] || echo "DELETE"
+	[ ! -L "$(PLANCK)robenkleene_macos" ] || echo "DELETE"
