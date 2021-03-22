@@ -1,14 +1,15 @@
 .PHONY: link unlink
 
-ERGODOX = ../qmk_firmware/keyboards/ergodox_ez/keymaps/
-PLANCK = ../qmk_firmware/keyboards/planck/keymaps/
+NAME = robenkleene_macos
+ERGODOX_DIR = ../qmk_firmware/keyboards/ergodox_ez/keymaps/
+PLANCK_DIR = ../qmk_firmware/keyboards/planck/keymaps/
+ERGODOX = $(ERGODOX_DIR)$(NAME)
+PLANCK = $(PLANCK_DIR)$(NAME)
 
 link:
-	ln -s ergodox_ez/robenkleene_macos $(ERGODOX)
-	ln -s planck/robenkleene_macos $(PLANCK)
+	ln -s ergodox_ez/$(NAME) $(ERGODOX_DIR)
+	ln -s planck/$(NAME) $(PLANCK_DIR)
 
 unlink:
-	# [ ! -L "$ERGODOX" ] || rm -v "$ERGODOX"; 
-	# [ ! -L "$PLANCK" ] || rm -v "$PLANCK"; 
-	[ ! -L "$(ERGODOX)robenkleene_macos" ] || echo "DELETE"
-	[ ! -L "$(PLANCK)robenkleene_macos" ] || echo "DELETE"
+	[ ! -L "$(ERGODOX)" ] || rm -v "$(ERGODOX)"
+	[ ! -L "$(PLANCK)" ] || rm -v "$(PLANCK)"
