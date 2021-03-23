@@ -1,12 +1,14 @@
 # Ergodox
 
-## Firmware
+## New
 
-### `qmk_firmware`
+    qmk compile -kb ergodox_ez -km robenkleene_macos
+
+## Old
 
 [robenkleene/qmk_firmware](https://github.com/robenkleene/qmk_firmware)
 
-#### Compiling
+### Compiling
 
 1. Compile
 

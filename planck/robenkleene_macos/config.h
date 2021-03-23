@@ -38,3 +38,4 @@
 */
 #define ORYX_CONFIGURATOR
 #define FIRMWARE_VERSION u8"EWWe6/bgROA"
+#define RGBLIGHT_LAYERS t
