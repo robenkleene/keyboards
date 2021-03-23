@@ -13,6 +13,7 @@
 1. Compile
 
 	make ergodox_ez:robenkleene_macos
+	make ergodox_ez:robenkleene_macos2
 	CFLAGS="-Wno-error=deprecated" make planck/ez:robenkleene_macos
 
 2. This builds the firmware in `/qmk_firmware/.build`
