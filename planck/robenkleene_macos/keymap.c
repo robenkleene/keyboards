@@ -82,7 +82,7 @@ void rgb_matrix_indicators_user(void) {
       rgb_matrix_set_color_all(17, 25, 17);
       break;
     case _FCTN:
-      rgb_matrix_set_color_all(25, 0, 25);
+      rgb_matrix_set_color_all(17, 25, 17);
       break;
     case _FCT2:
       rgb_matrix_set_color_all(0, 0, 25);
@@ -97,5 +97,9 @@ void rgb_matrix_indicators_user(void) {
     if (rgb_matrix_get_flags() == LED_FLAG_NONE)
       rgb_matrix_set_color_all(0, 0, 0);
     break;
+  }
+
+  if (host_keyboard_leds() & (1<<USB_LED_CAPS_LOCK)) {
+    rgb_matrix_set_color_all(25, 0, 25);
   }
 }
