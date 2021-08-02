@@ -90,7 +90,7 @@ KC_TRNS,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,   KC_TRNS,
 KC_GRV,    KC_1,     KC_2,     KC_3,     KC_4,     KC_5,    KC_BRIU,
 MO(UTIL),  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,
 KC_TRNS,   KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,  KC_BRID,
-MO(FCT2),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+TG(NUMB),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 
 // Left Cluster
 KC_TRNS,  KC_TRNS,
@@ -174,11 +174,11 @@ KC_TRNS,  KC_TRNS,  KC_TRNS
 [NUMB] = LAYOUT_ergodox(
 
 // Left Keyboard
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-KC_TRNS,  KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_TRNS,
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_TRNS,
+KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+TG(NUMB),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 
 // Left Cluster
 KC_TRNS,  KC_TRNS,
@@ -209,6 +209,7 @@ void keyboard_post_init_user(void) {
 
 void rgb_matrix_indicators_user(void) {
   if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
+  ergodox_right_led_2_off();
   switch (biton32(layer_state)) {
     case BASE:
       rgb_matrix_set_color_all(17, 25, 17);
@@ -220,15 +221,20 @@ void rgb_matrix_indicators_user(void) {
       rgb_matrix_set_color_all(0, 0, 25);
       break;
     case NUMB:
+      ergodox_right_led_2_on();
       rgb_matrix_set_color_all(0, 25, 0);
       break;
     case UTIL:
       rgb_matrix_set_color_all(25, 0, 0);
       break;
-   default:
-    if (rgb_matrix_get_flags() == LED_FLAG_NONE)
-      rgb_matrix_set_color_all(0, 0, 0);
-    break;
+    default:
+      if (rgb_matrix_get_flags() == LED_FLAG_NONE)
+        rgb_matrix_set_color_all(0, 0, 0);
+      break;
+  }
+  if (host_keyboard_leds() & (1<<USB_LED_CAPS_LOCK)) {
+    ergodox_right_led_1_on();
+  } else {
+    ergodox_right_led_1_off();
   }
 }
-
