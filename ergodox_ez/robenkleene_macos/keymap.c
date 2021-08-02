@@ -41,7 +41,7 @@ KC_GRV,    KC_1,     KC_2,     KC_3,     KC_4,      KC_5,  KC_NO,
 KC_TAB,    KC_Q,     KC_W,     KC_E,     KC_R,      KC_T,  KC_NO,
 KC_ESC,    KC_A,     KC_S,     KC_D,     KC_F,      KC_G,
 KC_LSFT,   KC_Z,     KC_X,     KC_C,     KC_V,      KC_B,  KC_NO,
-TG(NUMB),  KC_LCTL,  KC_LALT,  KC_LGUI,  MO(FCTN),
+KC_CAPS,   KC_LCTL,  KC_LALT,  KC_LGUI,  MO(FCTN),
 
 // Left Cluster
 KC_LGUI,  MO(FCTN),
@@ -92,7 +92,7 @@ KC_TRNS,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,   KC_TRNS,
 KC_GRV,    KC_1,     KC_2,     KC_3,     KC_4,     KC_5,    KC_BRIU,
 MO(UTIL),  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,
 KC_TRNS,   KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,  KC_BRID,
-MO(FCT2),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+TG(NUMB),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 
 // Left Cluster
 KC_TRNS,  KC_TRNS,
@@ -176,11 +176,11 @@ KC_TRNS,  KC_TRNS,  KC_TRNS
 [NUMB] = LAYOUT_ergodox(
 
 // Left Keyboard
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-KC_TRNS,  KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_TRNS,
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_TRNS,
+KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+TG(NUMB),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 
 // Left Cluster
 KC_TRNS,  KC_TRNS,
@@ -215,13 +215,7 @@ void matrix_scan_user(void) {
     case UTIL:
       ergodox_led_all_on();
       break;
-    case FCTN:
-      ergodox_right_led_3_on();
-      break;
     case NUMB:
-      ergodox_right_led_1_on();
-      break;
-    case FCT2:
       ergodox_right_led_2_on();
       break;
     default:
@@ -229,4 +223,9 @@ void matrix_scan_user(void) {
       break;
   }
 
+  if (host_keyboard_leds() & (1<<USB_LED_CAPS_LOCK)) {
+    ergodox_right_led_1_on();
+  } else {
+    ergodox_right_led_1_off();
+  }
 };
