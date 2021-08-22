@@ -81,10 +81,10 @@ void rgb_matrix_indicators_user(void) {
   if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
   switch (biton32(layer_state)) {
     case _BASE:
-      rgb_matrix_set_color_all(17, 25, 17);
+      rgb_matrix_set_color_all(8, 12, 8);
       break;
     case _FCTN:
-      rgb_matrix_set_color_all(17, 25, 17);
+      rgb_matrix_set_color_all(8, 12, 8);
       break;
     case _FCT2:
       rgb_matrix_set_color_all(0, 0, 25);
