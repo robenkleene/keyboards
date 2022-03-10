@@ -22,6 +22,6 @@ link:
 
 unlink:
 	[ ! -L "$(ERGODOX_DST)" ] || rm -v "$(ERGODOX_DST)"
-	[ ! -L "$(ERGODOX2_DST)" ] || rm -v "$(ERGODOX_DST)"
+	[ ! -L "$(ERGODOX2_DST)" ] || rm -v "$(ERGODOX2_DST)"
 	[ ! -L "$(PLANCK_DST)" ] || rm -v "$(PLANCK_DST)"
 	[ ! -L "$(MOONLANDER_DST)" ] || rm -v "$(MOONLANDER_DST)"
