@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
 // Otherwise, it needs KC_*
-[BASE] = LAYOUT_ergodox(  // layer 0 : default
+[BASE] = LAYOUT_moonlander(  // layer 0 : default
 
 // Left Keyboard
 KC_GRV,    KC_1,     KC_2,     KC_3,     KC_4,      KC_5,  KC_NO,
@@ -83,7 +83,7 @@ KC_PGDN,   KC_ENT,   KC_SPC
  */
 
 // SYMBOLS
-[FCTN] = LAYOUT_ergodox(
+[FCTN] = LAYOUT_moonlander(
 
 // Left Keyboard
 KC_TRNS,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,   KC_TRNS,
@@ -112,7 +112,7 @@ KC_TRNS,  KC_TRNS,  KC_TRNS
 ),
 
 // Function 2
-[FCT2] = LAYOUT_ergodox(
+[FCT2] = LAYOUT_moonlander(
 
 // Left Keyboard
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
@@ -142,7 +142,7 @@ KC_TRNS,  KC_TRNS,  KC_TRNS
 
 
 // Util
-[UTIL] = LAYOUT_ergodox(
+[UTIL] = LAYOUT_moonlander(
 
 // Left Keyboard
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
@@ -171,7 +171,7 @@ KC_TRNS,  KC_TRNS,  KC_TRNS
 ),
 
 // Function 2
-[NUMB] = LAYOUT_ergodox(
+[NUMB] = LAYOUT_moonlander(
 
 // Left Keyboard
 KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
@@ -211,7 +211,6 @@ void keyboard_post_init_user(void) {
 
 void rgb_matrix_indicators_user(void) {
   if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
-  ergodox_right_led_2_off();
   switch (biton32(layer_state)) {
     case BASE:
       rgb_matrix_set_color_all(17, 25, 17);
@@ -223,7 +222,6 @@ void rgb_matrix_indicators_user(void) {
       rgb_matrix_set_color_all(0, 0, 25);
       break;
     case NUMB:
-      ergodox_right_led_2_on();
       rgb_matrix_set_color_all(0, 25, 0);
       break;
     case UTIL:
@@ -233,10 +231,5 @@ void rgb_matrix_indicators_user(void) {
       if (rgb_matrix_get_flags() == LED_FLAG_NONE)
         rgb_matrix_set_color_all(0, 0, 0);
       break;
-  }
-  if (host_keyboard_leds() & (1<<USB_LED_CAPS_LOCK)) {
-    ergodox_right_led_1_on();
-  } else {
-    ergodox_right_led_1_off();
   }
 }
