@@ -2,6 +2,8 @@
 
 ## New
 
+`make link`, then:
+
     qmk compile -kb ergodox_ez -km robenkleene_macos
 
 ## Old
