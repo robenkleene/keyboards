@@ -19,6 +19,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |  -   |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   ?  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+ :2
+
  *   |      | LCTRL| LALT | LGUI |  Fn  |                                       |  Fn  | RGUI | RALT | RCTRL|      |
  *   `----------------------------------'                                       `----------------------------------'
                                                 --------.       ,-------------.
@@ -136,12 +138,7 @@ void keyboard_post_init_user(void) {
 }
 
 void rgb_matrix_indicators_user(void) {
-  ML_LED_1(0);
-  ML_LED_2(0);
-  ML_LED_3(0);
-  ML_LED_4(0);
-  ML_LED_5(0);
-  ML_LED_6(0);
+  ML_LED_2(false);
   switch (biton32(layer_state)) {
     case BASE:
       rgb_matrix_set_color_all(17, 25, 17);
@@ -153,7 +150,7 @@ void rgb_matrix_indicators_user(void) {
       rgb_matrix_set_color_all(0, 0, 25);
       break;
     case NUMB:
-      ML_LED_2(1);
+      ML_LED_2(true);
       rgb_matrix_set_color_all(0, 25, 0);
       break;
     case UTIL:
@@ -165,8 +162,8 @@ void rgb_matrix_indicators_user(void) {
       break;
   }
   if (host_keyboard_leds() & (1<<USB_LED_CAPS_LOCK)) {
-    ML_LED_3(1);
+    ML_LED_3(true);
   } else {
-    ML_LED_3(0);
+    ML_LED_3(false);
   }
 }
