@@ -1,3 +1,4 @@
 
 RGB_MATRIX_ENABLE = yes
+AUDIO_ENABLE = no
 
