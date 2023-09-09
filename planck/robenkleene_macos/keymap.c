@@ -77,8 +77,8 @@ void keyboard_post_init_user(void) {
   rgb_matrix_enable();
 }
 
-void rgb_matrix_indicators_user(void) {
-  if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
+bool rgb_matrix_indicators_user(void) {
+  if (g_suspend_state || keyboard_config.disable_layer_led) { return false; }
   switch (biton32(layer_state)) {
     case _BASE:
       rgb_matrix_set_color_all(8, 12, 8);
@@ -104,4 +104,6 @@ void rgb_matrix_indicators_user(void) {
   if (host_keyboard_leds() & (1<<USB_LED_CAPS_LOCK)) {
     rgb_matrix_set_color_all(25, 0, 25);
   }
+
+  return false;
 }
