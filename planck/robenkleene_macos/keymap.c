@@ -71,14 +71,12 @@ KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  
 
 };
 
-extern bool g_suspend_state;
-
 void keyboard_post_init_user(void) {
   rgb_matrix_enable();
 }
 
 bool rgb_matrix_indicators_user(void) {
-  if (g_suspend_state || keyboard_config.disable_layer_led) { return false; }
+  if (keyboard_config.disable_layer_led) { return false; }
   switch (biton32(layer_state)) {
     case _BASE:
       rgb_matrix_set_color_all(8, 12, 8);
