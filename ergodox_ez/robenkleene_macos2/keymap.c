@@ -89,7 +89,7 @@ KC_PGDN,   KC_ENT,   KC_SPC
 KC_TRNS,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,   KC_TRNS,
 KC_GRV,    KC_1,     KC_2,     KC_3,     KC_4,     KC_5,    KC_PAUS,
 MO(UTIL),  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,
-KC_TRNS,   KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,  KC_SLCK,
+KC_TRNS,   KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,  KC_SCRL,
 KC_CAPS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 
 // Left Cluster
@@ -118,7 +118,7 @@ KC_TRNS,  KC_TRNS,  KC_TRNS
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_SLCK,  KC_PAUS,  KC_TRNS,  KC_TRNS,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_SCRL,  KC_PAUS,  KC_TRNS,  KC_TRNS,
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 
 // Left Cluster
@@ -158,7 +158,7 @@ KC_TRNS,  KC_TRNS,  KC_TRNS,
 
 // Right Keyboard
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,  KC_TRNS,
-KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,  RESET,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,  QK_REBOOT,
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,  KC_TRNS,
 KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
@@ -203,14 +203,12 @@ KC_TRNS,  KC_TRNS,  KC_TRNS
 
 };
 
-extern bool g_suspend_state;
-
 void keyboard_post_init_user(void) {
   rgb_matrix_enable();
 }
 
-void rgb_matrix_indicators_user(void) {
-  if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
+bool rgb_matrix_indicators_user(void) {
+  if (keyboard_config.disable_layer_led) { return false; }
   ergodox_right_led_2_off();
   switch (biton32(layer_state)) {
     case BASE:
@@ -234,9 +232,11 @@ void rgb_matrix_indicators_user(void) {
         rgb_matrix_set_color_all(0, 0, 0);
       break;
   }
-  if (host_keyboard_leds() & (1<<USB_LED_CAPS_LOCK)) {
+  if (host_keyboard_led_state().caps_lock) {
     ergodox_right_led_1_on();
   } else {
     ergodox_right_led_1_off();
   }
+
+  return false;
 }
