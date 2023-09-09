@@ -1,4 +1,4 @@
-.PHONY: link unlink
+.PHONY: link unlink setup
 
 NAME = robenkleene_macos
 NAME2 = robenkleene_macos2
@@ -13,6 +13,9 @@ ERGODOX_DST = $(ERGODOX_DIR)$(NAME)
 ERGODOX2_DST = $(ERGODOX_DIR)$(NAME2)
 MOONLANDER_DST = $(MOONLANDER_DIR)$(NAME2)
 PLANCK_DST = $(PLANCK_DIR)$(NAME)
+
+setup:
+	qmk setup -H ../qmk_firmware/
 
 link:
 	[ -L "$(ERGODOX_DST)" ] || ln -s $(ERGODOX_SRC) $(ERGODOX_DIR)
