@@ -139,6 +139,15 @@ void keyboard_post_init_user(void) {
 
 bool rgb_matrix_indicators_user(void) {
   ML_LED_2(false);
+
+  if (host_keyboard_led_state().caps_lock) {
+    ML_LED_3(true);
+    rgb_matrix_set_color_all(25, 0, 25);
+    return false;
+  } else {
+    ML_LED_3(false);
+  }
+
   switch (biton32(layer_state)) {
     case BASE:
       rgb_matrix_set_color_all(17, 25, 17);
@@ -161,10 +170,6 @@ bool rgb_matrix_indicators_user(void) {
         rgb_matrix_set_color_all(0, 0, 0);
       break;
   }
-  if (host_keyboard_led_state().caps_lock) {
-    ML_LED_3(true);
-  } else {
-    ML_LED_3(false);
-  }
+
   return false;
 }

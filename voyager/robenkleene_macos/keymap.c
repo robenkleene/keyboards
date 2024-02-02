@@ -61,6 +61,12 @@ void keyboard_post_init_user(void) {
 
 bool rgb_matrix_indicators_user(void) {
   if (keyboard_config.disable_layer_led) { return false; }
+
+  if (host_keyboard_led_state().caps_lock) {
+    rgb_matrix_set_color_all(25, 0, 25);
+    return false;
+  }
+
   switch (biton32(layer_state)) {
     case _BASE:
       rgb_matrix_set_color_all(17, 25, 17);
@@ -81,10 +87,6 @@ bool rgb_matrix_indicators_user(void) {
     if (rgb_matrix_get_flags() == LED_FLAG_NONE)
       rgb_matrix_set_color_all(0, 0, 0);
     break;
-  }
-
-  if (host_keyboard_led_state().caps_lock) {
-    rgb_matrix_set_color_all(25, 0, 25);
   }
 
   return false;
