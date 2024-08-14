@@ -20,7 +20,7 @@ VOYAGER_DST = $(VOYAGER_DIR)$(NAME)
 compile:
 	qmk compile -kb ergodox_ez -km robenkleene_macos2
 	qmk compile -kb moonlander -km robenkleene_macos
-	qmk compile -kb zsa/voyager -km default
+	qmk compile -kb zsa/voyager -km robenkleene_macos
 
 setup:
 	qmk setup -H ../qmk_firmware/
