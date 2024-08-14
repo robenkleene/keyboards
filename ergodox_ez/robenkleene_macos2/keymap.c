@@ -44,7 +44,7 @@ KC_ESC,   KC_LCTL,  KC_LALT,  KC_LGUI,  MO(FCTN),
 // Left Cluster
 KC_LGUI,  MO(FCTN),
 KC_HOME,
-KC_SPC,   KC_ENT,    KC_END,
+KC_SPC,   KC_ESC,    KC_END,
 
 // Right Keyboard
 KC_NO,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_NO,
