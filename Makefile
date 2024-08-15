@@ -17,10 +17,16 @@ MOONLANDER_DST = $(MOONLANDER_DIR)$(NAME)
 PLANCK_DST = $(PLANCK_DIR)$(NAME)
 VOYAGER_DST = $(VOYAGER_DIR)$(NAME)
 
-compile:
-	qmk compile -kb ergodox_ez -km robenkleene_macos2
-	qmk compile -kb moonlander -km robenkleene_macos
+compile: compile_ergodox compile_moonlander compile_voyager
+
+compile_voyager:
 	qmk compile -kb zsa/voyager -km robenkleene_macos
+
+compile_ergodox:
+	qmk compile -kb ergodox_ez -km robenkleene_macos2
+
+compile_moonlander:
+	qmk compile -kb moonlander -km robenkleene_macos
 
 setup:
 	qmk setup -H ../qmk_firmware/
