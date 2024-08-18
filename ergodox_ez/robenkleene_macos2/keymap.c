@@ -86,11 +86,11 @@ KC_PGDN,   KC_ENT,   KC_SPC
 [FCTN] = LAYOUT_ergodox(
 
 // Left Keyboard
-KC_TRNS,   KC_F1,    KC_F2,    KC_F3,    KC_F4,     KC_F5,   KC_TRNS,
-KC_GRV,    KC_1,     KC_2,     KC_3,     KC_4,      KC_5,    KC_PAUS,
-TG(NUMB),  KC_F1,    KC_F2,    KC_F3,    KC_F4,     KC_F5,
-KC_TRNS,   KC_F7,    KC_F8,    KC_F9,    KC_F10,    KC_F11,  KC_SCRL,
-KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  MO(FCT2),
+KC_TRNS,  KC_F1,    KC_F2,    KC_F3,    KC_F4,     KC_F5,   KC_TRNS,
+KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,      KC_5,    KC_PAUS,
+KC_TRNS,  KC_F1,    KC_F2,    KC_F3,    KC_F4,     KC_F5,
+KC_TRNS,  KC_F7,    KC_F8,    KC_F9,    KC_F10,    KC_F11,  KC_SCRL,
+KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  MO(FCT2),
 
 // Left Cluster
 KC_TRNS,  KC_TRNS,
