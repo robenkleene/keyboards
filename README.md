@@ -1,7 +1,5 @@
 # Ergodox
 
-## New
-
 `make link`, then:
 
     qmk compile -kb ergodox_ez -km robenkleene_macos2
@@ -9,11 +7,7 @@
     qmk compile -kb planck/ez -km robenkleene_macos
     qmk compile -kb zsa/voyager -km robenkleene_macos
 
-## Old
-
-[robenkleene/qmk_firmware](https://github.com/robenkleene/qmk_firmware)
-
-### Compiling
+## Compiling
 
 1. Compile
 
@@ -26,11 +20,11 @@
 2. This builds the firmware in `/qmk_firmware/.build`
 3. It looks like this can be installed with just the `.hex` file (without the `.eep` file) from below?
 
-### Notes
+## Notes
 
 In source code, align key code columns with `column -t`.
 
-### Installation
+## Installation
 
 Using Teensy, the "Teensy reset button" is the paperclip button in the upper right of the keyboard.
 
@@ -38,7 +32,11 @@ Using Teensy, the "Teensy reset button" is the paperclip button in the upper rig
 2. Click the "Auto" button in Teensy.
 3. Press the Teensy reset button.
 
-#### Resources
+## Keymap
+
+- The reason the number lock mode isn't the same as the function layer: 1. When entering numbers, we can't override the arrows because we sometimes need the `/` key, 2. We can't override the programming symbols keys because we sometimes need the `;` key.
+
+## Resources
 
 * [Available Key Codes](https://github.com/jackhumbert/qmk_firmware/blob/master/doc/keycode.txt)
 * [Some keymap information, but this is for `tmk`](https://github.com/tmk/tmk_core/blob/master/doc/keymap.md#31-momentary-switching)
