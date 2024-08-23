@@ -31,7 +31,7 @@ KC_MINS,   KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_RSFT,
 MO(FCTN),  KC_RGUI,  KC_RALT,  KC_LCTL,  KC_ENT,
 
 // Right Cluster
-KC_NO,  TG(NUMB),
+KC_NO,  TG(FCTN),
 KC_NO,
 KC_NO,  KC_ENT,    KC_SPC
     ),
@@ -161,12 +161,12 @@ void keyboard_post_init_user(void) {
 bool rgb_matrix_indicators_user(void) {
   if (keyboard_config.disable_layer_led) { return false; }
 
-  // Num lock turned on later
   ergodox_right_led_2_off();
+  ergodox_right_led_3_off();
 
   if (host_keyboard_led_state().caps_lock) {
     ergodox_right_led_1_on();
-    rgb_matrix_set_color_all(25, 0, 25);
+    rgb_matrix_set_color_all(0, 0, 25);
     return false;
   } else {
     ergodox_right_led_1_off();
@@ -180,13 +180,14 @@ bool rgb_matrix_indicators_user(void) {
       rgb_matrix_set_color_all(25, 0, 25);
       break;
     case FCT2:
-      rgb_matrix_set_color_all(0, 0, 25);
+      rgb_matrix_set_color_all(0, 25, 25);
       break;
     case NUMB:
       ergodox_right_led_2_on();
       rgb_matrix_set_color_all(0, 25, 0);
       break;
     case UTIL:
+      ergodox_right_led_3_on();
       rgb_matrix_set_color_all(25, 0, 0);
       break;
     default:
