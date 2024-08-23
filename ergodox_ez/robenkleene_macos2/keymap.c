@@ -59,7 +59,7 @@ KC_VOLD,  KC_F12,   KC_MPLY,  KC_VOLD,  KC_VOLU,   KC_UP,    KC_TRNS,
 MO(FCT2), KC_TRNS,  KC_LEFT,  KC_DOWN,  KC_RIGHT,
 
 // Right Cluster
-KC_MPRV,  KC_MNXT,
+KC_TRNS,  KC_TRNS,
 KC_TRNS,
 KC_TRNS,  KC_TRNS,  KC_TRNS
 
@@ -162,14 +162,14 @@ bool rgb_matrix_indicators_user(void) {
   if (keyboard_config.disable_layer_led) { return false; }
 
   ergodox_right_led_2_off();
-  ergodox_right_led_3_off();
+  ergodox_right_led_1_off();
 
   if (host_keyboard_led_state().caps_lock) {
-    ergodox_right_led_1_on();
+    ergodox_right_led_3_on();
     rgb_matrix_set_color_all(0, 0, 25);
     return false;
   } else {
-    ergodox_right_led_1_off();
+    ergodox_right_led_3_off();
   }
 
   switch (biton32(layer_state)) {
@@ -187,7 +187,7 @@ bool rgb_matrix_indicators_user(void) {
       rgb_matrix_set_color_all(0, 25, 0);
       break;
     case UTIL:
-      ergodox_right_led_3_on();
+      ergodox_right_led_1_on();
       rgb_matrix_set_color_all(25, 0, 0);
       break;
     default:
