@@ -14,7 +14,7 @@ ERGODOX_DIR = ../qmk_firmware/keyboards/ergodox_ez/keymaps/
 PLANCK_DIR = ../qmk_firmware/keyboards/planck/keymaps/
 MOONLANDER_DIR = ../qmk_firmware/keyboards/moonlander/keymaps/
 VOYAGER_DIR = ../qmk_firmware/keyboards/zsa/voyager/keymaps/
-LILY_DIR = ../qmk_firmware/keyboards/keyboards/lily58/keymaps/
+LILY_DIR = ../qmk_firmware/keyboards/lily58/keymaps/
 
 ERGODOX_DST = $(ERGODOX_DIR)$(NAME)
 ERGODOX2_DST = $(ERGODOX_DIR)$(NAME2)
@@ -46,6 +46,7 @@ link:
 	[ -L "$(PLANCK_DST)" ] || ln -s $(PLANCK_SRC) $(PLANCK_DIR)
 	[ -L "$(MOONLANDER_DST)" ] || ln -s $(MOONLANDER_SRC) $(MOONLANDER_DIR)
 	[ -L "$(VOYAGER_DST)" ] || ln -s $(VOYAGER_SRC) $(VOYAGER_DIR)
+	[ -L "$(LILY_DST)" ] || ln -s $(LILY_SRC) $(LILY_DIR)
 
 unlink:
 	[ ! -L "$(ERGODOX_DST)" ] || rm -v "$(ERGODOX_DST)"
@@ -53,3 +54,4 @@ unlink:
 	[ ! -L "$(PLANCK_DST)" ] || rm -v "$(PLANCK_DST)"
 	[ ! -L "$(MOONLANDER_DST)" ] || rm -v "$(MOONLANDER_DST)"
 	[ ! -L "$(VOYAGER_DST)" ] || rm -v "$(VOYAGER_DST)"
+	[ ! -L "$(LILY_DST)" ] || rm -v "$(LILY_DST)"
