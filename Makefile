@@ -35,7 +35,7 @@ compile_moonlander:
 	qmk compile -kb moonlander -km robenkleene_macos
 
 compile_lily:
-	qmk compile -kb lily -km robenkleene_macos
+	qmk compile -kb lily58 -km robenkleene_macos
 
 setup:
 	qmk setup -H ../qmk_firmware/
