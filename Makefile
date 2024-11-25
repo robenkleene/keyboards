@@ -35,7 +35,7 @@ compile_moonlander:
 	qmk compile -kb moonlander -km robenkleene_macos
 
 compile_iris:
-	qmk compile -kb iris -km robenkleene_macos
+	qmk compile -kb keebio/iris/rev8 -km robenkleene_macos
 
 setup:
 	qmk setup -H ../qmk_firmware/
