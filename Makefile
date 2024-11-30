@@ -26,6 +26,7 @@ IRIS_DST = $(IRIS_DIR)$(NAME)
 compile: compile_ergodox compile_moonlander compile_voyager
 
 compile_voyager:
+	echo "To compile Voyager, make sure the `voyager` `qmk_firmware` branch is checked out"
 	qmk compile -kb zsa/voyager -km robenkleene_macos
 
 compile_ergodox:
