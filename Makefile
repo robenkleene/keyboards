@@ -12,7 +12,7 @@ IRIS_SRC = $(shell pwd)/iris/$(NAME)
 
 ERGODOX_DIR = ../qmk_firmware/keyboards/ergodox_ez/keymaps/
 PLANCK_DIR = ../qmk_firmware/keyboards/planck/keymaps/
-MOONLANDER_DIR = ../qmk_firmware/keyboards/moonlander/keymaps/
+MOONLANDER_DIR = ../qmk_firmware/keyboards/zsa/moonlander/keymaps/
 VOYAGER_DIR = ../qmk_firmware/keyboards/zsa/voyager/keymaps/
 IRIS_DIR = ../qmk_firmware/keyboards/keebio/iris/keymaps/
 
