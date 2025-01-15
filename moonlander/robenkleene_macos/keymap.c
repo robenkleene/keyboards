@@ -89,8 +89,8 @@ KC_TRNS,  KC_TRNS,  KC_TRNS,                                                    
 KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_SCRL,  KC_PAUS,  KC_TRNS,  KC_TRNS,  KC_MUTE,  KC_MPRV,  KC_MNXT,  KC_PGUP,  KC_TRNS,
-MO(UTIL),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_HOME,  KC_PGDN,  KC_END,
+KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_SCRL,  KC_PAUS,  KC_TRNS,  KC_TRNS,  KC_MPRV,  KC_MNXT,  KC_PGUP,  KC_MUTE,  KC_TRNS,
+MO(UTIL),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_HOME,  KC_PGDN,  KC_END,   KC_TRNS,
 
 // Left Cluster                                                                 // Right Cluster
 KC_TRNS,  KC_TRNS,  KC_TRNS,                                                    KC_TRNS,  KC_TRNS,  KC_TRNS
