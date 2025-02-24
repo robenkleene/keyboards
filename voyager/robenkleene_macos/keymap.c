@@ -66,7 +66,7 @@ bool rgb_matrix_indicators_user(void) {
   if (keyboard_config.disable_layer_led) { return false; }
 
   if (host_keyboard_led_state().caps_lock) {
-    rgb_matrix_set_color_all(0, 0, 25);
+    rgb_matrix_set_color_all(0, 0, 255);
     return false;
   }
 
@@ -75,16 +75,16 @@ bool rgb_matrix_indicators_user(void) {
       rgb_matrix_set_color_all(17, 25, 17);
       break;
     case _FCTN:
-      rgb_matrix_set_color_all(25, 0, 25);
+      rgb_matrix_set_color_all(255, 0, 255);
       break;
     case _FCT2:
-      rgb_matrix_set_color_all(0, 25, 25);
+      rgb_matrix_set_color_all(0, 255, 255);
       break;
     case _NUMB:
-      rgb_matrix_set_color_all(0, 25, 0);
+      rgb_matrix_set_color_all(0, 255, 0);
       break;
     case _UTIL:
-      rgb_matrix_set_color_all(25, 0, 0);
+      rgb_matrix_set_color_all(255, 0, 0);
       break;
    default:
     if (rgb_matrix_get_flags() == LED_FLAG_NONE)
