@@ -36,12 +36,15 @@ KC_TRNS,  KC_TRNS,  KC_TRNS,                                                    
 ),
 
 // Function 2
+
+// `KC_SCRL` / `KC_PAUS`: Brigthness down / up on macOS
+
 [FCT2] = LAYOUT_moonlander(
 
 KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_DEL,
 KC_TRNS,   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-KC_TRNS,   KC_BRID,  KC_TRNS,  KC_BRIU,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_MUTE,  KC_MPRV,  KC_PGUP,  KC_MNXT,  KC_TRNS,
+KC_TRNS,   KC_SCRL,  KC_TRNS,  KC_PAUS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_MUTE,  KC_MPRV,  KC_PGUP,  KC_MNXT,  KC_TRNS,
 MO(UTIL),  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_HOME,  KC_PGDN,  KC_END,   KC_PENT,
 
 // Left Cluster                                                                 // Right Cluster

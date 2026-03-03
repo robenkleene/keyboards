@@ -10,11 +10,11 @@ PLANCK_SRC = $(shell pwd)/planck/$(NAME)
 VOYAGER_SRC = $(shell pwd)/voyager/$(NAME)
 IRIS_SRC = $(shell pwd)/iris/$(NAME)
 
-ERGODOX_DIR = ../qmk_firmware/keyboards/ergodox_ez/keymaps/
-PLANCK_DIR = ../qmk_firmware/keyboards/planck/keymaps/
-MOONLANDER_DIR = ../qmk_firmware/keyboards/zsa/moonlander/keymaps/
-VOYAGER_DIR = ../qmk_firmware/keyboards/zsa/voyager/keymaps/
-IRIS_DIR = ../qmk_firmware/keyboards/keebio/iris/keymaps/
+ERGODOX_DIR = ~/Developer/Vendor/qmk_firmware/keyboards/ergodox_ez/keymaps/
+PLANCK_DIR = ~/Developer/Vendor/qmk_firmware/keyboards/planck/keymaps/
+MOONLANDER_DIR = ~/Developer/Vendor/qmk_firmware/keyboards/zsa/moonlander/keymaps/
+VOYAGER_DIR = ~/Developer/Vendor/qmk_firmware/keyboards/zsa/voyager/keymaps/
+IRIS_DIR = ~/Developer/Vendor/qmk_firmware/keyboards/keebio/iris/keymaps/
 
 ERGODOX_DST = $(ERGODOX_DIR)$(NAME)
 ERGODOX2_DST = $(ERGODOX_DIR)$(NAME2)
