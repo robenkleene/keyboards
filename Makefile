@@ -39,7 +39,7 @@ compile_iris:
 	qmk compile -kb keebio/iris/rev8 -km robenkleene_macos
 
 setup:
-	qmk setup -H ../qmk_firmware/
+	qmk setup -H ~/Developer/Vendor/qmk_firmware/
 
 link:
 	[ -L "$(ERGODOX_DST)" ] || ln -s $(ERGODOX_SRC) $(ERGODOX_DIR)
