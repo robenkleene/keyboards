@@ -29,7 +29,7 @@ compile_voyager:
 	echo "To compile Voyager, make sure the `voyager` `qmk_firmware` branch is checked out"
 	qmk compile -kb zsa/voyager -km robenkleene_macos
 
-compile_ergodox:
+compile_ergodox2:
 	qmk compile -kb ergodox_ez -km robenkleene_macos2
 
 compile_moonlander:
