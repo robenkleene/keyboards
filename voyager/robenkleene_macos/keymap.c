@@ -20,7 +20,7 @@ KC_CAPS,  KC_A,     KC_S,     KC_D,     KC_F,       KC_G,   KC_H,   KC_J,       
 KC_LSFT,  KC_Z,     KC_X,     KC_C,     KC_V,       KC_B,   KC_N,   KC_M,       KC_COMMA,  KC_DOT,   KC_SLSH,  KC_RSFT,
 KC_ESC,   KC_LCTL,  KC_LALT,  KC_LGUI,  MO(_FCTN),  KC_NO,  KC_NO,  MO(_FCTN),  KC_RGUI,   KC_RALT,  KC_RCTL,  KC_ENT,
 
-KC_BSPC,  KC_ESC,   KC_ENT,   KC_SPC
+KC_SPC,   KC_ESC,   KC_ENT,   KC_SPC
 ),
 [_FCTN] = LAYOUT(
 
