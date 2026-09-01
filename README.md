@@ -35,6 +35,7 @@ Using Teensy, the "Teensy reset button" is the paperclip button in the upper rig
 ## Keymap
 
 - The reason the number lock mode isn't the same as the function layer: 1. When entering numbers, we can't override the arrows because we sometimes need the `/` key, 2. We can't override the programming symbols keys because we sometimes need the `;` key.
+- We need space bar on both sides (and can't remap the left space bar to backspace), because lots of image editing apps use holding space bar to drag around the canvas, so it's assumed you'll be holding the space bar with your left hand and dragging the mouse with your right.
 
 ## Resources
 
