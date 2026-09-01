@@ -23,7 +23,7 @@ PLANCK_DST = $(PLANCK_DIR)$(NAME)
 VOYAGER_DST = $(VOYAGER_DIR)$(NAME)
 IRIS_DST = $(IRIS_DIR)$(NAME)
 
-compile: compile_ergodox compile_moonlander compile_voyager
+compile: compile_ergodox2 compile_moonlander compile_voyager
 
 compile_voyager:
 	echo "To compile Voyager, make sure the `voyager` `qmk_firmware` branch is checked out"
